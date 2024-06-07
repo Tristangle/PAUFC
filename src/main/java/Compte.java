@@ -1,7 +1,7 @@
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
+
+import java.util.List;
+
 
 @Entity
 public class Compte {
@@ -11,13 +11,21 @@ public class Compte {
     private String password;
     private String email;
     private boolean DoubleFA;
-    // À modifier
+
     @ManyToOne
     @JoinColumn(name = "role_id")
     private Role role;
-    private long tache_id;
-    private long planning_id;
-    private long employe_id;
+
+    @OneToMany(mappedBy = "tachesAttribues")
+    private List<Tache> tachesAttribues;
+    @OneToMany(mappedBy = "tachesAssignees")
+    private List<Tache> tachesAssignees;
+    @OneToOne
+    @JoinColumn(name = "planning_id")
+    private Planning planning;
+    @ManyToOne
+    @JoinColumn(name = "employe_id")
+    private Employe employe;
 
     public void setId(Long id) {
         this.id = id;

@@ -1,5 +1,8 @@
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.List;
 
 @Entity
 public class Role {
@@ -8,7 +11,8 @@ public class Role {
     private String nom;
     private boolean acces_temporaire;
     // À modifier
-    private long compte_id;
+    @OneToMany(mappedBy = "role")
+    private List<Compte> comptes;
 
     public void setId(Long id) {
         this.id = id;
