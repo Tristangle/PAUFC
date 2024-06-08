@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7bfe7a2-c8e4-4698-8063-5e2aa7b1dbd5" name="Changes" comment="Init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Tache.java" afterDir="false" />
+    <list default="true" id="d7bfe7a2-c8e4-4698-8063-5e2aa7b1dbd5" name="Changes" comment="Update relations with Compte">
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Meeting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Planning.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Questions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Sondage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Tache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Compte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Compte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Employe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Employe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Compte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Compte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Employe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Employe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Meeting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Planning.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sondage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1717494953896</updated>
       <workItem from="1717494954856" duration="1157000" />
-      <workItem from="1717509401073" duration="8355000" />
+      <workItem from="1717509401073" duration="15684000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
@@ -72,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717704888962</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update relations with Compte">
+      <option name="closed" value="true" />
+      <created>1717759453066</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717759453066</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,13 +98,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init" />
+    <MESSAGE value="Update relations with Compte" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update relations with Compte" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/core/Main.java</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>

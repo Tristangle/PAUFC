@@ -1,3 +1,5 @@
+package core.ufcquechoisir.entites;
+
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -6,6 +8,7 @@ import java.util.List;
 @Entity
 public class Compte {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String username;
     private String password;
@@ -27,8 +30,20 @@ public class Compte {
     @JoinColumn(name = "employe_id")
     private Employe employe;
 
-    public void setId(Long id) {
+    public Compte(){
+    }
+
+    public Compte(long id, String username, String password, String email, boolean doubleFA, Role role, List<Tache> tachesAttribues, List<Tache> tachesAssignees, Planning planning, Employe employe) {
         this.id = id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        DoubleFA = doubleFA;
+        this.role = role;
+        this.tachesAttribues = tachesAttribues;
+        this.tachesAssignees = tachesAssignees;
+        this.planning = planning;
+        this.employe = employe;
     }
 
     public Long getId() {
