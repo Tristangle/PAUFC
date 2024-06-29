@@ -2,6 +2,7 @@ package core.ufcquechoisir.entites;
 
 import jakarta.persistence.*;
 
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -10,6 +11,8 @@ public class Sondage {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nom;
+
+    private Date date;
 
     @ManyToMany(mappedBy = "sondages")
     private List<Meeting> meetings;

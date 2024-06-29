@@ -4,22 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7bfe7a2-c8e4-4698-8063-5e2aa7b1dbd5" name="Changes" comment="Update relations with Compte">
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Meeting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Planning.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Questions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Sondage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Tache.java" afterDir="false" />
+    <list default="true" id="d7bfe7a2-c8e4-4698-8063-5e2aa7b1dbd5" name="Changes" comment="Delete SetID, end relations and generated constructors for entities">
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/datas/MeetingData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/datas/PlanningData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/datas/RoleData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/datas/TacheData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/datas/TokenData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/datas/UserData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/datas/VoteData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/datas/VoteOptionData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/datas/VoteQuestionData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/datas/VoteResponseData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/dto/MeetingDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/dto/PlanningDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/dto/RoleDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/dto/TacheDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/dto/TokenDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/dto/VoteDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/dto/VoteOptionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/dto/VoteQuestionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/dto/VoteResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/mapper/MeetingMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/mapper/PlanningMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/mapper/RoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/mapper/TacheMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Compte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Compte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Employe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Employe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Meeting.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Planning.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sondage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Sondage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/ufcquechoisir/entites/Sondage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1717494953896</updated>
       <workItem from="1717494954856" duration="1157000" />
-      <workItem from="1717509401073" duration="15684000" />
+      <workItem from="1717509401073" duration="33907000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
@@ -90,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717759453066</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Delete SetID, end relations and generated constructors for entities">
+      <option name="closed" value="true" />
+      <created>1717869505722</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717869505722</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,7 +120,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
     <MESSAGE value="Update relations with Compte" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update relations with Compte" />
+    <MESSAGE value="Delete SetID, end relations and generated constructors for entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete SetID, end relations and generated constructors for entities" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
