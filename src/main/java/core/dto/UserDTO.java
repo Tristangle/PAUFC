@@ -9,26 +9,23 @@ public class UserDTO {
     private String email;
     private List<TokenDTO> tokens;
     private RoleDTO roles;
-    private List<MeetingDTO> meetings;
-    private List<PlanningDTO> plannings;
-    private List<TacheDTO> tachesAssignees;
-    private List<TacheDTO> tachesAttribues;
+    private List<TacheDTO> tachesCreer;
+    private List<TacheDTO> tachesExecute;
 
     // Default constructor
     public UserDTO() {
     }
 
     // Parameterized constructor
-    public UserDTO(long id, String username, String email, List<TokenDTO> tokens, RoleDTO roles, List<MeetingDTO> meetings, List<PlanningDTO> plannings, List<TacheDTO> tachesAssignees, List<TacheDTO> tachesAttribues) {
+    public UserDTO(long id, String username, String email, List<TokenDTO> tokens, RoleDTO roles, List<TacheDTO> tachesCreer, List<TacheDTO> tachesExecute) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.tokens = tokens;
         this.roles = roles;
-        this.meetings = meetings;
-        this.plannings = plannings;
-        this.tachesAssignees = tachesAssignees;
-        this.tachesAttribues = tachesAttribues;
+
+        this.tachesCreer = tachesCreer;
+        this.tachesExecute = tachesExecute;
     }
 
     // Getters and Setters
@@ -72,36 +69,20 @@ public class UserDTO {
     public void setRoles(RoleDTO roles) {
         this.roles = roles;
     }
-
-    public List<MeetingDTO> getMeetings() {
-        return meetings;
+    
+    public List<TacheDTO> getTachesCreer() {
+        return tachesCreer;
     }
 
-    public void setMeetings(List<MeetingDTO> meetings) {
-        this.meetings = meetings;
+    public void setTachesCreer(List<TacheDTO> tachesCreer) {
+        this.tachesCreer = tachesCreer;
     }
 
-    public List<PlanningDTO> getPlannings() {
-        return plannings;
+    public List<TacheDTO> getTachesExecute() {
+        return tachesExecute;
     }
 
-    public void setPlannings(List<PlanningDTO> plannings) {
-        this.plannings = plannings;
-    }
-
-    public List<TacheDTO> getTachesAssignees() {
-        return tachesAssignees;
-    }
-
-    public void setTachesAssignees(List<TacheDTO> tachesAssignees) {
-        this.tachesAssignees = tachesAssignees;
-    }
-
-    public List<TacheDTO> getTachesAttribues() {
-        return tachesAttribues;
-    }
-
-    public void setTachesAttribues(List<TacheDTO> tachesAttribues) {
-        this.tachesAttribues = tachesAttribues;
+    public void setTachesExecute(List<TacheDTO> tachesExecute) {
+        this.tachesExecute = tachesExecute;
     }
 }

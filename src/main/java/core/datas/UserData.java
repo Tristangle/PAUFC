@@ -9,36 +9,28 @@ public class UserData {
     private String email;
     private List<TokenData> tokens;
     private RoleData roles;
-    private List<MeetingData> meetings;
-    private List<PlanningData> plannings;
-    private List<TacheData> tachesAssignees;
-    private List<TacheData> tachesAttribues;
+    private List<TacheData> tachesCreer;
+    private List<TacheData> tachesExecute;
 
 
     public UserData() {
     }
 
     // Parameterized constructor
-    public UserData(long id, String username, String email, List<TokenData> tokens, RoleData roles, List<MeetingData> meetings, List<PlanningData> plannings, List<TacheData> tachesAssignees, List<TacheData> tachesAttribues) {
+    public UserData(long id, String username, String email, List<TokenData> tokens, RoleData roles, List<TacheData> tachesCreer, List<TacheData> tachesExecute) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.tokens = tokens;
         this.roles = roles;
-        this.meetings = meetings;
-        this.plannings = plannings;
-        this.tachesAssignees = tachesAssignees;
-        this.tachesAttribues = tachesAttribues;
+        this.tachesCreer = tachesCreer;
+        this.tachesExecute = tachesExecute;
     }
 
     // Getters and Setters
 
     public long getId() {
         return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getUsername() {
@@ -73,35 +65,19 @@ public class UserData {
         this.roles = roles;
     }
 
-    public List<MeetingData> getMeetings() {
-        return meetings;
+    public List<TacheData> getTachesCreer() {
+        return tachesCreer;
     }
 
-    public void setMeetings(List<MeetingData> meetings) {
-        this.meetings = meetings;
+    public void setTachesCreer(List<TacheData> tachesCreer) {
+        this.tachesCreer = tachesCreer;
     }
 
-    public List<PlanningData> getPlannings() {
-        return plannings;
+    public List<TacheData> getTachesExecute() {
+        return tachesExecute;
     }
 
-    public void setPlannings(List<PlanningData> plannings) {
-        this.plannings = plannings;
-    }
-
-    public List<TacheData> getTachesAssignees() {
-        return tachesAssignees;
-    }
-
-    public void setTachesAssignees(List<TacheData> tachesAssignees) {
-        this.tachesAssignees = tachesAssignees;
-    }
-
-    public List<TacheData> getTachesAttribues() {
-        return tachesAttribues;
-    }
-
-    public void setTachesAttribues(List<TacheData> tachesAttribues) {
-        this.tachesAttribues = tachesAttribues;
+    public void setTachesExecute(List<TacheData> tachesExecute) {
+        this.tachesExecute = tachesExecute;
     }
 }

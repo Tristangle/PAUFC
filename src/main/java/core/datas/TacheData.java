@@ -4,38 +4,18 @@ import java.util.Date;
 import java.util.List;
 
 public class TacheData {
-
     private long id;
     private String nom;
     private String description;
-    private String status;
-    private Date date_debut;
-    private Date date_fin;
-    private UserData tachesAttribues;
-    private UserData tachesAssignees;
-    private List<PlanningData> plannings;
+    private Date dateDebut;
+    private Date dateFin;
+    private String type;
+    private long createurTacheId;
+    private long executeurTacheId;
 
-    public TacheData() {
-    }
-
-    public TacheData(long id, String nom, String description, String status, Date date_debut, Date date_fin, UserData tachesAttribues, UserData tachesAssignees, List<PlanningData> plannings) {
-        this.id = id;
-        this.nom = nom;
-        this.description = description;
-        this.status = status;
-        this.date_debut = date_debut;
-        this.date_fin = date_fin;
-        this.tachesAttribues = tachesAttribues;
-        this.tachesAssignees = tachesAssignees;
-        this.plannings = plannings;
-    }
 
     public long getId() {
         return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getNom() {
@@ -54,51 +34,47 @@ public class TacheData {
         this.description = description;
     }
 
-    public String getStatus() {
-        return status;
+    public Date getDateDebut() {
+        return dateDebut;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setDateDebut(Date dateDebut) {
+        this.dateDebut = dateDebut;
     }
 
-    public Date getDate_debut() {
-        return date_debut;
+    public Date getDateFin() {
+        return dateFin;
     }
 
-    public void setDate_debut(Date date_debut) {
-        this.date_debut = date_debut;
+    public void setDateFin(Date dateFin) {
+        this.dateFin = dateFin;
     }
 
-    public Date getDate_fin() {
-        return date_fin;
+    public String getType() {
+        return type;
     }
 
-    public void setDate_fin(Date date_fin) {
-        this.date_fin = date_fin;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public UserData getTachesAttribues() {
-        return tachesAttribues;
+    public long getCreateurTacheId() {
+        return createurTacheId;
     }
 
-    public void setTachesAttribues(UserData tachesAttribues) {
-        this.tachesAttribues = tachesAttribues;
+    public void setCreateurTacheId(long createurTacheId) {
+        this.createurTacheId = createurTacheId;
     }
 
-    public UserData getTachesAssignees() {
-        return tachesAssignees;
+    public long getExecuteurTacheId() {
+        return executeurTacheId;
     }
 
-    public void setTachesAssignees(UserData tachesAssignees) {
-        this.tachesAssignees = tachesAssignees;
+    public void setExecuteurTacheId(long executeurTacheId) {
+        this.executeurTacheId = executeurTacheId;
     }
 
-    public List<PlanningData> getPlannings() {
-        return plannings;
-    }
-
-    public void setPlannings(List<PlanningData> plannings) {
-        this.plannings = plannings;
+    public void setId(long id) {
+        this.id = id;
     }
 }

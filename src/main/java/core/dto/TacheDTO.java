@@ -1,33 +1,30 @@
 package core.dto;
 
 import java.util.Date;
-import java.util.List;
 
 public class TacheDTO {
 
     private long id;
     private String nom;
     private String description;
-    private String status;
-    private Date date_debut;
-    private Date date_fin;
-    private UserDTO tachesAttribues;
-    private UserDTO tachesAssignees;
-    private List<PlanningDTO> plannings;
+    private Date dateDebut;
+    private Date dateFin;
+    private String type;
+    private UserDTO createurTache;
+    private UserDTO executeurTache;
 
     public TacheDTO() {
     }
 
-    public TacheDTO(long id, String nom, String description, String status, Date date_debut, Date date_fin, UserDTO tachesAttribues, UserDTO tachesAssignees, List<PlanningDTO> plannings) {
+    public TacheDTO(long id, String nom, String description, Date dateDebut, Date dateFin, String type, UserDTO createurTache, UserDTO executeurTache) {
         this.id = id;
         this.nom = nom;
         this.description = description;
-        this.status = status;
-        this.date_debut = date_debut;
-        this.date_fin = date_fin;
-        this.tachesAttribues = tachesAttribues;
-        this.tachesAssignees = tachesAssignees;
-        this.plannings = plannings;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
+        this.type = type;
+        this.createurTache = createurTache;
+        this.executeurTache = executeurTache;
     }
 
     public long getId() {
@@ -54,51 +51,43 @@ public class TacheDTO {
         this.description = description;
     }
 
-    public String getStatus() {
-        return status;
+    public Date getDateDebut() {
+        return dateDebut;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setDateDebut(Date dateDebut) {
+        this.dateDebut = dateDebut;
     }
 
-    public Date getDate_debut() {
-        return date_debut;
+    public Date getDateFin() {
+        return dateFin;
     }
 
-    public void setDate_debut(Date date_debut) {
-        this.date_debut = date_debut;
+    public void setDateFin(Date dateFin) {
+        this.dateFin = dateFin;
     }
 
-    public Date getDate_fin() {
-        return date_fin;
+    public String getType() {
+        return type;
     }
 
-    public void setDate_fin(Date date_fin) {
-        this.date_fin = date_fin;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public UserDTO getTachesAttribues() {
-        return tachesAttribues;
+    public UserDTO getCreateurTache() {
+        return createurTache;
     }
 
-    public void setTachesAttribues(UserDTO tachesAttribues) {
-        this.tachesAttribues = tachesAttribues;
+    public void setCreateurTache(UserDTO createurTache) {
+        this.createurTache = createurTache;
     }
 
-    public UserDTO getTachesAssignees() {
-        return tachesAssignees;
+    public UserDTO getExecuteurTache() {
+        return executeurTache;
     }
 
-    public void setTachesAssignees(UserDTO tachesAssignees) {
-        this.tachesAssignees = tachesAssignees;
-    }
-
-    public List<PlanningDTO> getPlannings() {
-        return plannings;
-    }
-
-    public void setPlannings(List<PlanningDTO> plannings) {
-        this.plannings = plannings;
+    public void setExecuteurTache(UserDTO executeurTache) {
+        this.executeurTache = executeurTache;
     }
 }
