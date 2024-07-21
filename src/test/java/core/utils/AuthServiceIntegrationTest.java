@@ -10,6 +10,9 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import java.util.List;
+import java.util.Map;
+
 public class AuthServiceIntegrationTest {
 
     @BeforeAll
@@ -128,4 +131,84 @@ public class AuthServiceIntegrationTest {
         System.out.println("Logout Response: " + logoutResponse.asString());
         assertEquals(201, logoutResponse.statusCode());
     }
+
+    @Test
+    public void testDeleteUser() {
+        String adminUsername = "administrateur2";
+        String adminPassword = "administrateur2";
+
+        // Login as admin to get the token
+        Response loginResponse = given()
+                .contentType("application/json")
+                .body(new AuthService.LoginRequest(adminUsername, adminPassword))
+                .when()
+                .post("/auth/login")
+                .then()
+                .extract()
+                .response();
+
+        System.out.println("Login Response: " + loginResponse.asString());
+        assertEquals(200, loginResponse.statusCode());
+
+        String token = loginResponse.jsonPath().getString("token");
+        assertNotNull(token);
+
+        // Assume there is a user with ID 2 to delete
+        int userIdToDelete = 18;
+
+        // Delete user
+        Response deleteResponse = given()
+                .header("Authorization", "Bearer " + token)
+                .when()
+                .delete("/users/" + userIdToDelete)
+                .then()
+                .extract()
+                .response();
+
+        System.out.println("Delete User Response: " + deleteResponse.asString());
+        assertEquals(200, deleteResponse.statusCode());
+    }
+
+    @Test
+    public void testListUsers() {
+        String adminUsername = "administrateur";
+        String adminPassword = "administrateur";
+
+        // Login as admin to get the token
+        Response loginResponse = given()
+                .contentType("application/json")
+                .body(new AuthService.LoginRequest(adminUsername, adminPassword))
+                .when()
+                .post("/auth/login")
+                .then()
+                .extract()
+                .response();
+
+        System.out.println("Login Response: " + loginResponse.asString());
+        assertEquals(200, loginResponse.statusCode());
+
+        String token = loginResponse.jsonPath().getString("token");
+        assertNotNull(token);
+
+        // List users with pagination parameters
+        int page = 1;
+        int result = 9;
+
+        Response listResponse = given()
+                .header("Authorization", "Bearer " + token)
+                .when()
+                .get("/users?page=" + page + "&result=" + result)
+                .then()
+                .extract()
+                .response();
+
+        System.out.println("List Users Response: " + listResponse.asString());
+        assertEquals(200, listResponse.statusCode());
+
+        // Validate the list of users
+        List<Map<String, Object>> users = listResponse.jsonPath().getList("user");
+        assertNotNull(users);
+        assertEquals(result, users.size());
+    }
+
 }

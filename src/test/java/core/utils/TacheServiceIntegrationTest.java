@@ -36,7 +36,7 @@ public class TacheServiceIntegrationTest {
             "date_fin": "2024-07-10T00:00:00Z",
             "type": "Type de la tâche",
             "createur": 15, 
-            "executeur": 16
+            "executeur": 17
         }
         """;
 
@@ -52,7 +52,7 @@ public class TacheServiceIntegrationTest {
                 .body("description", equalTo("Description de la tâche"))
                 .body("type", equalTo("Type de la tâche"))
                 .body("createurTache.id", equalTo(15))
-                .body("executeurTache.id", equalTo(16))
+                .body("executeurTache.id", equalTo(17))
                 .extract()
                 .path("id");
     }
@@ -74,7 +74,7 @@ public class TacheServiceIntegrationTest {
                 .body("description", equalTo("Description de la tâche"))
                 .body("type", equalTo("Type de la tâche"))
                 .body("createurTache.id", equalTo(15))
-                .body("executeurTache.id", equalTo(16));
+                .body("executeurTache.id", equalTo(17));
     }
 
     @Test
@@ -89,8 +89,8 @@ public class TacheServiceIntegrationTest {
             "date_debut": "2024-07-05T00:00:00.000Z",
             "date_fin": "2024-07-15T00:00:00.000Z",
             "type": "Type mis à jour",
-            "createur": { "id": 16 },
-            "executeur": { "id": 15 }
+            "createur": { "id": 15 },
+            "executeur": { "id": 17 }
         }
         """;
 
@@ -99,17 +99,17 @@ public class TacheServiceIntegrationTest {
                 .contentType(ContentType.JSON)
                 .body(payload)
                 .when()
-                .patch("/taches/" + createdTacheId)
+                .patch("/taches/" + 1)
                 .then()
                 .statusCode(200)
-                .body("id", equalTo(createdTacheId))
+                .body("id", equalTo(1))
                 .body("nom", equalTo("Nom de la tâche mise à jour"))
                 .body("description", equalTo("Description mise à jour"))
                 .body("date_debut", equalTo("2024-07-05T00:00:00.000Z"))
                 .body("date_fin", equalTo("2024-07-15T00:00:00.000Z"))
                 .body("type", equalTo("Type mis à jour"))
-                .body("createurTache.id", equalTo(16))
-                .body("executeurTache.id", equalTo(15));
+                .body("createurTache.id", equalTo(15))
+                .body("executeurTache.id", equalTo(17));
     }
 
     @Test

@@ -4,6 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import core.utils.HttpClientUtil;
 import core.utils.TokenManager;
 
+import java.util.List;
+import java.util.Map;
+
 public class AuthService {
 
     private static final String API_URL = "http://localhost:3000"; // Endpoint de base de votre API Node.js
@@ -31,7 +34,6 @@ public class AuthService {
         try {
             String payload = objectMapper.writeValueAsString(new SignupRequest(username, email, password));
             HttpClientUtil.sendPostRequest(API_URL + "/auth/signup", payload, null);
-            // Après l'inscription réussie, vous pouvez appeler la méthode login pour obtenir le jeton
             return login(username, password);
         } catch (Exception e) {
             e.printStackTrace();
@@ -46,6 +48,27 @@ public class AuthService {
             TokenManager.getInstance().clearToken(); // Supprimer le token
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public void deleteUser(long userId) {
+        try {
+            String token = TokenManager.getInstance().getToken();
+            HttpClientUtil.sendDeleteRequest(API_URL + "/users/" + userId, token);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public List<Map<String, Object>> listUsers(int page, int result) {
+        try {
+            String token = TokenManager.getInstance().getToken();
+            String response = HttpClientUtil.sendGetRequest(API_URL + "/users?page=" + page + "&result=" + result, token);
+            UserListResponse userListResponse = objectMapper.readValue(response, UserListResponse.class);
+            return userListResponse.getUsers();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
     }
 
@@ -123,6 +146,19 @@ public class AuthService {
 
         public void setToken(String token) {
             this.token = token;
+        }
+    }
+
+    public static class UserListResponse {
+        private List<Map<String, Object>> users;
+
+        // Getters et setters
+        public List<Map<String, Object>> getUsers() {
+            return users;
+        }
+
+        public void setUsers(List<Map<String, Object>> users) {
+            this.users = users;
         }
     }
 }
