@@ -7,7 +7,7 @@ public class UserDTO {
     private long id;
     private String username;
     private String email;
-    private List<TokenDTO> tokens;
+    private TokenDTO token;
     private RoleDTO roles;
     private List<TacheDTO> tachesCreer;
     private List<TacheDTO> tachesExecute;
@@ -17,17 +17,24 @@ public class UserDTO {
     }
 
     // Parameterized constructor
-    public UserDTO(long id, String username, String email, List<TokenDTO> tokens, RoleDTO roles, List<TacheDTO> tachesCreer, List<TacheDTO> tachesExecute) {
+    public UserDTO(long id, String username, String email, TokenDTO token, RoleDTO roles, List<TacheDTO> tachesCreer, List<TacheDTO> tachesExecute) {
         this.id = id;
         this.username = username;
         this.email = email;
-        this.tokens = tokens;
+        this.token = token;
         this.roles = roles;
 
         this.tachesCreer = tachesCreer;
         this.tachesExecute = tachesExecute;
     }
 
+    public UserDTO(long id, String username, String email, TokenDTO token, RoleDTO roles) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.token = token;
+        this.roles = roles;
+    }
     // Getters and Setters
 
     public long getId() {
@@ -54,12 +61,12 @@ public class UserDTO {
         this.email = email;
     }
 
-    public List<TokenDTO> getTokens() {
-        return tokens;
+    public TokenDTO getToken() {
+        return token;
     }
 
-    public void setTokens(List<TokenDTO> tokens) {
-        this.tokens = tokens;
+    public void setToken(TokenDTO token) {
+        this.token = token;
     }
 
     public RoleDTO getRoles() {

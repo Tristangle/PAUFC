@@ -4,30 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7bfe7a2-c8e4-4698-8063-5e2aa7b1dbd5" name="Changes" comment="Create data, create dto">
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/services/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/services/TacheService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/utils/ApiResponseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/utils/GetStringUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/utils/HttpClientUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/utils/TokenManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/core/utils/AuthServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d7bfe7a2-c8e4-4698-8063-5e2aa7b1dbd5" name="Changes" comment="Services, DTO, httprequest, test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/core/utils/AuthServiceIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/core/utils/TacheServiceIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/core/utils/TacheServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/datas/MeetingData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/datas/PlanningData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/datas/TacheData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/datas/TacheData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/datas/TokenData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/datas/TokenData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/datas/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/datas/UserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/dto/MeetingDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/dto/PlanningDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/dto/TacheDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/dto/TacheDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/mapper/MeetingMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/mapper/PlanningMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/mapper/TacheMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/mapper/TacheMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +67,7 @@
       <workItem from="1717494954856" duration="1157000" />
       <workItem from="1717509401073" duration="35406000" />
       <workItem from="1719669830903" duration="603000" />
-      <workItem from="1719672218834" duration="11057000" />
+      <workItem from="1719672218834" duration="18197000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
@@ -118,7 +101,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719667804245</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Services, DTO, httprequest, test">
+      <option name="closed" value="true" />
+      <created>1721507411255</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721507411255</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +120,8 @@
     <MESSAGE value="Update relations with Compte" />
     <MESSAGE value="Delete SetID, end relations and generated constructors for entities" />
     <MESSAGE value="Create data, create dto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create data, create dto" />
+    <MESSAGE value="Services, DTO, httprequest, test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Services, DTO, httprequest, test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
